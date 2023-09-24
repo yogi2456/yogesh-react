@@ -7,6 +7,10 @@ import Login from './Components/Login';
 import Counter from './Components/Counter';
 import Effect1 from './Components/13-09/Effect1';
 import Effect2 from './Components/13-09/Effect2';
+import Effect3 from './Components/15-09/Effect3';
+import Effect4 from './Components/15-09/Effect4';
+import Params from './Components/15-09/Params';
+import SingleProduct from './Components/15-09/SingleProduct';
 
 function App() {
   return (
@@ -22,7 +26,11 @@ function App() {
       <Route exact path='/counter' element={<Counter />} />
       <Route exact path='/Effect1' element={<Effect1 />} />
       <Route exact path='/Effect2' element={<Effect2 />} />
-     </Routes>
+      <Route exact path='/Effect3' element={<Effect3 />} />
+      <Route exact path='/Effect4' element={<Effect4 />}/>
+      <Route exact path='/Params' element={<Params />} />
+      <Route exact path='/SingleProduct' element={<SingleProduct />} />
+      </Routes>
     </div>
   );
 }

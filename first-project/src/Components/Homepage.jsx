@@ -13,6 +13,7 @@ function Homepage () {
             <h1>Homepage</h1>
             <button onClick={routerToLogin}>Go to Login</button>
             <button onClick={() => router('/register')}>Go to Register</button>
+            <button onClick={() => router('/Profile.')}>Go to Prfile</button>
         </div>
     )
 }
