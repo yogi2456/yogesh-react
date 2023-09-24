@@ -11,8 +11,13 @@ import Effect3 from './Components/15-09/Effect3';
 import Effect4 from './Components/15-09/Effect4';
 import Params from './Components/15-09/Params';
 import SingleProduct from './Components/15-09/SingleProduct';
+import Mapping from './Components/16-09/Mapping';
+import Ternary from './Components/16-09/Ternary';
+import { useState } from 'react';
+import Counterse from './Components/16-09/Counterse';
 
 function App() {
+  const [loggedIn, setIsLoggedIn] = useState(Flase);
   return (
     <div className="App">
      <Routes>
@@ -30,6 +35,9 @@ function App() {
       <Route exact path='/Effect4' element={<Effect4 />}/>
       <Route exact path='/Params' element={<Params />} />
       <Route exact path='/SingleProduct' element={<SingleProduct />} />
+      <Route exact path='/Mapping' element={<Mapping kuchbhi={Hii} names={["rahul", "raj", "karan", "sagar", "ram"]} />} />
+      <Route exact path='/Ternary' element={<Ternary loggedIn={loggedIn} setIsLoggedIn={setIsLoggedIn} />} />
+      <Route exact path='/Counterse' element={<Counterse />} />
       </Routes>
     </div>
   );
