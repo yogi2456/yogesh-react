@@ -18,6 +18,15 @@ function Homepage () {
             <button onClick={() => router('/Effect2')}>Effect2</button>
             <button onClick={() => router('/Effect3')}>Effect3</button>
             <button onClick={() => router('/Effect4')}>Effect4</button>
+            <button onClick={() => router('/Params')}>Params</button>
+            <button onClick={() => router('/SingleProducts')}>SingleProducts</button>
+            <button onClick={() => router('/Counterse')}>Counterse</button>
+            <button onClick={() => router('/Mapping')}>Mapping</button>
+            <button onClick={() => router('/Ternary')}>Ternary</button>
+            <button onClick={() => router('/StyledComponents')}>StyledComponents</button>
+            <button onClick={() => router('/Dynamic-Styles')}>DynamicStyles</button>
+            <button onClick={() => router('/ChildrenProp')}>ChildrenProp</button>
+            <button onClick={() => router('/Register2')}>Register2</button>
         </div>
     )
 }
