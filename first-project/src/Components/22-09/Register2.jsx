@@ -3,18 +3,14 @@ import { useNavigate } from 'react-router-dom';
 
 const Register2 = () => {
   const [userData, setUserData] = useState({ name: "", email: "", password: "" });
-
   const router = useNavigate();
   // console.log(userData,"userdata")
 
   const handleChange = (event) => {
-    //console.log(event.target.value, "value", event.target.name, "name")
     // console.log(event.target.value, "value", event.target.name, "name")
     setUserData({ ...userData, [event.target.name]: event.target.value })
   }
 
-  const sendDataToBackend = () => {
-    //alert("Data submitted to backend..")
   const sendDataToBackend = async (event) => {
     event.preventDefault();
     // alert("Data submitted to backend..")
@@ -36,7 +32,6 @@ const Register2 = () => {
       alert("Please fill the all values..")
     }
   }
-}
 
   return (
     <div>
