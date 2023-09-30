@@ -27,6 +27,7 @@ function Homepage () {
             <button onClick={() => router('/Dynamic-Styles')}>DynamicStyles</button>
             <button onClick={() => router('/ChildrenProp')}>ChildrenProp</button>
             <button onClick={() => router('/Register2')}>Register2</button>
+            <button onClick={() => router('/ClassComponent')}>ClassComponent</button>
         </div>
     )
 }

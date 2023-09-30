@@ -19,12 +19,15 @@ import Counterse from './Components/16-09/Counterse';
 import DynamicStyles from './Components/20-09/DynamicStyles';
 import ChildrenProp from './Components/22-09/ChildrenProp';
 import Register2 from './Components/22-09/Register2';
+import ClassComponent from './Components/29-09/ClassComponent';
+import PageNotFound from './Components/29-09/PageNotFound';
 
 function App() {
   const [loggedIn, setIsLoggedIn] = useState(false);
   return (
     <div className="App">
      <Routes>
+     <Route path ='*' element={<PageNotFound />} />
       <Route path ='/' element={<Homepage />} />
       <Route path ='/login' element={< Login />} />
       <Route path ='/profile' element={< Profile />} />
@@ -46,6 +49,7 @@ function App() {
       <Route exact path='/Dynamic-Styles' element={<DynamicStyles />} />
       <Route exact path='/ChildrenProp' element={<ChildrenProp />} />
       <Route exact path='/Register2' element={<Register2 />} />
+      <Route exact path='/ClassComponent' element={<ClassComponent />} />
       </Routes>
     </div>
   );
