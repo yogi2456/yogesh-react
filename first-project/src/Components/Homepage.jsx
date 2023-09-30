@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 function Homepage () {
@@ -28,6 +29,9 @@ function Homepage () {
             <button onClick={() => router('/ChildrenProp')}>ChildrenProp</button>
             <button onClick={() => router('/Register2')}>Register2</button>
             <button onClick={() => router('/ClassComponent')}>ClassComponent</button>
+            <button onClick={() => toast.error ("Clicked")}>Click for toast error</button>
+            <button onClick={() => toast.success ("Clicked")}>Click for toast success</button>
+
         </div>
     )
 }
