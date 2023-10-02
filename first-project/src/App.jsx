@@ -22,6 +22,7 @@ import Register2 from './Components/22-09/Register2';
 import ClassComponent from './Components/29-09/ClassComponent';
 import PageNotFound from './Components/29-09/PageNotFound';
 import Login1 from './Components/30-09/Login1';
+import Products from './Components/30-09/Products';
 
 function App() {
   const [loggedIn, setIsLoggedIn] = useState(false);
@@ -51,8 +52,8 @@ function App() {
       <Route exact path='/ChildrenProp' element={<ChildrenProp />} />
       <Route exact path='/Register2' element={<Register2 />} />
       <Route exact path='/ClassComponent' element={<ClassComponent />} />
-      <Route exact path='/Login1' element={<Login1
-      />} />
+      <Route exact path='/Login1' element={<Login1 />} />
+      <Route exact path='/Products' element={<Products />} />
       </Routes>
     </div>
   );
