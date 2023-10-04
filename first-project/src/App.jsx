@@ -20,16 +20,15 @@ import DynamicStyles from './Components/20-09/DynamicStyles';
 import ChildrenProp from './Components/22-09/ChildrenProp';
 import Register2 from './Components/22-09/Register2';
 import ClassComponent from './Components/29-09/ClassComponent';
-import PageNotFound from './Components/29-09/PageNotFound';
 import Login1 from './Components/30-09/Login1';
 import Products from './Components/30-09/Products';
+import OneProduct from './Components/01-10/OneProduct';
 
 function App() {
   const [loggedIn, setIsLoggedIn] = useState(false);
   return (
     <div className="App">
      <Routes>
-     <Route path ='*' element={<PageNotFound />} />
       <Route path ='/' element={<Homepage />} />
       <Route path ='/login' element={< Login />} />
       <Route path ='/profile' element={< Profile />} />
@@ -54,6 +53,7 @@ function App() {
       <Route exact path='/ClassComponent' element={<ClassComponent />} />
       <Route exact path='/Login1' element={<Login1 />} />
       <Route exact path='/Products' element={<Products />} />
+      <Route exact path='/OneProduct/:id' element={<OneProduct />} />
       </Routes>
     </div>
   );
