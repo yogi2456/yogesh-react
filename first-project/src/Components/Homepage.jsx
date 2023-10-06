@@ -15,6 +15,7 @@ function Homepage () {
             <button onClick={routerToLogin}>Go to Login</button>
             <button onClick={() => router('/register')}>Go to Register</button>
             <button onClick={() => router('/Profile.')}>Go to Profile</button>
+            <button onClick={() => router('/counter')}>GO to counter</button>
             <button onClick={() => router('/Effect1')}>Effect1</button>
             <button onClick={() => router('/Effect2')}>Effect2</button>
             <button onClick={() => router('/Effect3')}>Effect3</button>
