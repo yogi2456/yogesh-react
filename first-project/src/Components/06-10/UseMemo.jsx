@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 
 const UseMemo = () => {
     const [counter, setCounter] = useState(0);
@@ -9,10 +9,6 @@ const UseMemo = () => {
     }
 
     // const lengthyCalculation = calculate(counter);
-
-    // useEffect(()=>{
-
-    // },[])
 
 
     const lengthyCalculation = useMemo(() => calculate(counter), [counter]);
@@ -40,4 +36,4 @@ const calculate = (counter) => {
     return counter;
 }
 
-export default UseMemo
+export default UseMemo;
