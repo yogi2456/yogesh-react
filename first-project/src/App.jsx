@@ -26,6 +26,8 @@ import OneProduct from './Components/01-10/OneProduct';
 import AddProduct from './Components/04-10/AddProduct';
 import UseMemo from './Components/06-10/UseMemo';
 import UseCallback from './Components/07-10/UseCallback';
+import UseReducer from './Components/08-10/UseReducer';
+import TestReducer from './Components/08-10/TestReducer';
 
 function App() {
   const [loggedIn, setIsLoggedIn] = useState(false);
@@ -60,6 +62,8 @@ function App() {
       <Route exact path='/AddProduct' element={<AddProduct />} />
       <Route exact path='/UseMemo' element={<UseMemo />} />
       <Route exact path='/UseCallback' element={<UseCallback />} />
+      <Route exact path='/UseReducer' element={<UseReducer />} />
+      <Route exact path='/TestReducer' element={<TestReducer />} />
       </Routes>
     </div>
   );
