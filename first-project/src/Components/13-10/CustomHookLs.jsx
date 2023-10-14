@@ -1,5 +1,6 @@
 import React from 'react';
 import useLocalstorage from './useLocalstorage';
+
 function CustomHookLS() {
     const [name, setName] = useLocalstorage('name', '');
     const handleChange = (event) => {

@@ -18,7 +18,7 @@ const AddProduct = () => {
             try {
                 const { data } = await axios.post("https://fakestoreapi.com/products", { title: productData.name, price: productData.price, image: productData.image })
                 console.log(data, "response from post request")
-                toast.success("Porduct added successfully, now you can add another product.")
+                toast.success("Product added successfully, now you can add another product.")
                 setProductData({ name: "", price: "", image: "" })
             } catch (error) {
                 console.log(error)
