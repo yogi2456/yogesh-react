@@ -35,6 +35,7 @@ function Homepage () {
             <button onClick={() => router('/Dynamic-Styles')}>DynamicStyles</button>
             <button onClick={() => router('/ChildrenProp')}>ChildrenProp</button>
             <button onClick={() => router('/Register2')}>Register2</button>
+            <button onClick={() => router('/Products')}>Products</button>
             <button onClick={() => router('/ClassComponent')}>ClassComponent</button>
             <button onClick={() => toast.error ("Clicked")}>Click for toast error</button>
             <button onClick={() => toast.success ("Clicked")}>Click for toast success</button>

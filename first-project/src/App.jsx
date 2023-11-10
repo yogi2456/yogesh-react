@@ -49,18 +49,18 @@ function App() {
       <Route exact path='/Effect3' element={<Effect3 />} />
       <Route exact path='/Effect4' element={<Effect4 />}/>
       <Route exact path='/Params' element={<Params />} />
-      <Route exact path='/SingleProduct' element={<SingleProduct />} />
+      {/* <Route exact path='/SingleProduct' element={<SingleProduct />} /> */}
       <Route exact path='/Mapping' element={<Mapping kuchbhi={'Hii'} names={["rahul", "raj", "karan", "sagar", "ram"]} />} />
       <Route exact path='/Ternary' element={<Ternary loggedIn={loggedIn} setIsLoggedIn={setIsLoggedIn} />} />
       <Route exact path='/StyledComponents' element={<StyledComponents />} />
-      <Route exact path='/Counterse' element={<Counterse />} />
+      {/* <Route exact path='/Counterse' element={<Counterse />} /> */}
       <Route exact path='/Dynamic-Styles' element={<DynamicStyles />} />
       <Route exact path='/ChildrenProp' element={<ChildrenProp />} />
       <Route exact path='/Register2' element={<Register2 />} />
       <Route exact path='/ClassComponent' element={<ClassComponent />} />
       <Route exact path='/Login1' element={<Login1 />} />
       <Route exact path='/Products' element={<Products />} />
-      <Route exact path='/OneProduct/:id' element={<OneProduct />} />
+      {/* <Route exact path='/OneProduct/:id' element={<OneProduct />} /> */}
       <Route exact path='/AddProduct' element={<AddProduct />} />
       <Route exact path='/UseMemo' element={<UseMemo />} />
       <Route exact path='/UseCallback' element={<UseCallback />} />

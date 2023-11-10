@@ -1,9 +1,7 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const Login1 = () => {
     const [userData, setUserData] = useState({email: "", Password: "", confirmpassword: ""});
-    const router = useNavigate();
 
     const handleChange = (event) => {
         setUserData({...userData, [event.target.name]: event.target.value})

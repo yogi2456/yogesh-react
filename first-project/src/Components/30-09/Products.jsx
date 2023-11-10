@@ -13,11 +13,15 @@ const Products = () => {
 
         async function getProducts () {
             try {
-            const { data } = await axios.get('https://fakestoreapi.com/products')
+            // const { data } = await axios.get('https://fakestoreapi.com/products')
+            const { data } = await axios.get('http://localhost:8000/api/v1/product/get-all-product')
             //console.log(data, "data here")
+            if(data.success) {
+                setProducts(data.Products)
+            }
             setProducts(data)
             } catch (error) {
-                toast.error("error.message")
+                toast.error("error.data.message")
             }
         }
         getProducts()
@@ -27,8 +31,9 @@ const Products = () => {
             {products.map((pro) => (
                 <div onClick={() => router(`/OneProduct/${pro.id}`)}  style={{  width: "18%", height: "500px", marginBottom: "50px", boxShadow: "5px 5px 5px 5px gray" }}>
                     <img style={{ width: "80%", height: "250px", paddingTop: "20px" }} src={pro.image} />
-                    <h1 style={{fontSize: "18px"}}>Name :{pro.title}</h1>
+                    <h1 style={{fontSize: "18px"}}>Name :{pro.name}</h1>
                     <h3>Price : {pro.price} $</h3>
+                    <h2>Category: {pro.category}</h2>
                     <button style={{width: "80px", height: "40px", border: "3px solid black"}}>View</button>
                 </div>
             ))}

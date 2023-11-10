@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import axios from 'axios'
+import api from '../../helpers/Axios.Config';
 
 const Register2 = () => {
   const [userData, setUserData] = useState({ name: "", email: "", password: "" });
@@ -18,10 +20,10 @@ const Register2 = () => {
     if (userData.name && userData.email && userData.password) {
       if (userData.password.length >= 8) {
         try {
-        // const response = await axios.post("http://localhost:8000/register", { userData });
-        const response = { data: { success: true } };
+         const response = await api.post("http://localhost:8000/api/v1/auth/register", { userData });
+        //const response = { data: { success: true } };
         if (response.data.success) {
-          alert("Registeration successfull.")
+          toast.success("Registeration successfull.")
           setUserData({ name: "", email: "", password: "" })
           router("/")
         } else {
