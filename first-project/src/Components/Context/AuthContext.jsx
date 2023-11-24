@@ -1,4 +1,5 @@
-import { createContext, useReducer } from "react";
+import { createContext, useEffect, useReducer } from "react";
+import toast from "react-hot-toast";
 
 
 
@@ -29,6 +30,23 @@ const ParentAuthContext = ({children}) => {
     const Logout = (data) => {
         dispatch({type: "LOGOUT"})
     }
+
+
+    useEffect(() => {
+        //alert("page is refreshed")
+
+        async function getCurrentUser() {
+            try {
+                const response = await api.post('/auth/get-current-user', {token})
+                 if(response.data.success) {
+                    console.log(response.data.user, "response.data.user")
+                    Login(response.data.user)
+                 }
+            } catch (error) {
+                toast.error(error, response.data.error)
+            }
+        }
+    }, [])
 
     return (
         <AuthContext.Provider value={{state, Login, Logout}}>
