@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
-import axios from 'axios'
 import api from '../../helpers/Axios.Config';
 
 const Register2 = () => {
@@ -25,7 +24,7 @@ const Register2 = () => {
         if (response.data.success) {
           toast.success("Registeration successfull.")
           setUserData({ name: "", email: "", password: "" })
-          router("/")
+          router("/login")
         } else {
           throw new Error("Something went wrong...")
         }

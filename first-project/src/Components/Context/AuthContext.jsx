@@ -1,5 +1,6 @@
 import { createContext, useEffect, useReducer } from "react";
 import toast from "react-hot-toast";
+import api from '../../helpers/Axios.Config';
 
 
 
@@ -27,8 +28,10 @@ const ParentAuthContext = ({children}) => {
     const Login = (data) => {
         dispatch({type: "LOGIN", payload: data})
     }
-    const Logout = (data) => {
+    const Logout = () => {
+        localStorage.removeItem("my-token")
         dispatch({type: "LOGOUT"})
+        toast.success("Logout successful")
     }
 
 
@@ -43,9 +46,14 @@ const ParentAuthContext = ({children}) => {
                     Login(response.data.user)
                  }
             } catch (error) {
-                toast.error(error, response.data.error)
+                toast.error(error.response.data.message)
             }
         }
+
+        const token = JSON.parse(localStorage.getItem("my-token"))
+            if(token) {
+                getCurrentUser()
+            }
     }, [])
 
     return (
