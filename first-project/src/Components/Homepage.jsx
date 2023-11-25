@@ -39,7 +39,7 @@ function Homepage () {
             <button onClick={() => router('/StyledComponents')}>StyledComponents</button>
             <button onClick={() => router('/Dynamic-Styles')}>DynamicStyles</button>
             <button onClick={() => router('/ChildrenProp')}>ChildrenProp</button>
-            <button onClick={() => router('/Register2')}>Register2</button> <br/>
+            <button style={{backgroundColor: "blue", color: "white"}} onClick={() => router('/Register2')}>Register2</button> <br/>
             <button onClick={() => router('/Products')}>Products</button>
             <button onClick={() => router('/ClassComponent')}>ClassComponent</button>
             <button onClick={() => toast.error ("Clicked")}>Click for toast error</button>
