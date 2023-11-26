@@ -23,7 +23,7 @@ function Homepage () {
             <button onClick={ () => dispatch({type: "INCREMENT"})}>+</button> */}
             <h1>User: {state?.user?.name}</h1>
             <button onClick={routerToLogin}>Go to Login</button> <br/>
-            <button onClick={Logout}>Logout?</button> <br/>
+            <button style={{backgroundColor: "red", color: "white"}} onClick={Logout}>Logout?</button> <br/>
             <button onClick={() => router('/register')}>Go to Register</button>
             <button onClick={() => router('/Profile.')}>Go to Profile</button>
             <button onClick={() => router('/counter')}>GO to counter</button>
