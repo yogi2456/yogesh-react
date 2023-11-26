@@ -9,6 +9,7 @@ const Login = () => {
   const router = useNavigate();
   const { Login, state } =useContext(AuthContext)
   // console.log(userData,"userdata")
+  console.log(state, "state")
 
   const handleChange = (event) => {
     // console.log(event.target.value, "value", event.target.name, "name")
@@ -34,7 +35,7 @@ const Login = () => {
           throw new Error("Something went wrong...")
         }
       } catch (error) {
-        toast.error(error?.message)
+        toast.error(error?.response.data.message)
         console.log(error, "error here")
       }
       } else {

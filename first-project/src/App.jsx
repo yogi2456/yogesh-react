@@ -10,19 +10,19 @@ import Effect2 from './Components/13-09/Effect2';
 import Effect3 from './Components/15-09/Effect3';
 import Effect4 from './Components/15-09/Effect4';
 import Params from './Components/15-09/Params';
-import SingleProduct from './Components/15-09/SingleProduct';
+//import SingleProduct from './Components/15-09/SingleProduct';
 import Mapping from './Components/16-09/Mapping';
 import Ternary from './Components/16-09/Ternary';
 import { useState } from 'react';
 import StyledComponents from './Components/16-09/StyledComponents';
-import Counterse from './Components/16-09/Counterse';
+//import Counterse from './Components/16-09/Counterse';
 import DynamicStyles from './Components/20-09/DynamicStyles';
 import ChildrenProp from './Components/22-09/ChildrenProp';
 import Register2 from './Components/22-09/Register2';
 import ClassComponent from './Components/29-09/ClassComponent';
 import Login1 from './Components/30-09/Login1';
 import Products from './Components/30-09/Products';
-import OneProduct from './Components/01-10/OneProduct';
+//import OneProduct from './Components/01-10/OneProduct';
 import AddProduct from './Components/04-10/AddProduct';
 import UseMemo from './Components/06-10/UseMemo';
 import UseCallback from './Components/07-10/UseCallback';
@@ -30,6 +30,7 @@ import UseReducer from './Components/08-10/UseReducer';
 import TestReducer from './Components/08-10/TestReducer';
 import Customhook from './Components/13-10/Customhook';
 import CustomHookLs from './Components/13-10/CustomHookLs';
+import YourProducts from './Components/YourProducts';
 
 function App() {
   const [loggedIn, setIsLoggedIn] = useState(false);
@@ -68,6 +69,7 @@ function App() {
       <Route exact path='/TestReducer' element={<TestReducer />} />
       <Route exact path='/CustomHook' element={<Customhook />} />
       <Route exact path='/CustomHookLs' element={<CustomHookLs />} />
+      <Route exact path='/your-products' element={<YourProducts />} />
       </Routes>
     </div>
   );

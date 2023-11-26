@@ -3,9 +3,11 @@ import React, { useContext, useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 import api from '../../helpers/Axios.Config'
 import { AuthContext } from '../Context/AuthContext'
+import { useNavigate } from 'react-router-dom'
 
 const AddProduct = () => {
 
+    const router = useNavigate();
     const {state} = useContext(AuthContext)
     const [productData, setProductData] = useState({ name: "", price: "", image: "", category: "" })
 
@@ -20,10 +22,10 @@ const AddProduct = () => {
         event.preventDefault();
         if (productData.name && productData.category && productData.price && productData.image && productData.price > 0) {
             try {
-                const { data } = await api.post("/product/add-product", { name: productData.name, price: productData.price, image: productData.image, category: productData.category })
+                const { data } = await api.post("/product/add-product", { name: productData.name, price: productData.price, image: productData.image, category: productData.category, id: state?.user?.id })
                 //console.log(data, "response from post request")
                 if(data.success) {
-                    //router('/all-products')
+                    router('/your-products')
                     toast.success(data.message)
                     setProductData({ name: "", price: "", image: "", category: "" })
                 }
@@ -36,8 +38,14 @@ const AddProduct = () => {
 
     }
 
+    console.log(state, "state", state?.user, state?.name)
+
     useEffect(() => {
-       
+       if(state?.user && state?.user?.name === undefined) {
+        alert(state?.user?.name)
+        //router('/login')
+        toast.error("please login to access this page")
+       }
     }, [state])
 
     return (
