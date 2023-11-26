@@ -31,6 +31,7 @@ import TestReducer from './Components/08-10/TestReducer';
 import Customhook from './Components/13-10/Customhook';
 import CustomHookLs from './Components/13-10/CustomHookLs';
 import YourProducts from './Components/YourProducts';
+import UpdateProduct from './Components/UpdateProduct';
 
 function App() {
   const [loggedIn, setIsLoggedIn] = useState(false);
@@ -70,6 +71,7 @@ function App() {
       <Route exact path='/CustomHook' element={<Customhook />} />
       <Route exact path='/CustomHookLs' element={<CustomHookLs />} />
       <Route exact path='/your-products' element={<YourProducts />} />
+      <Route exact path='/update-product/:id' element={<UpdateProduct />} />
       </Routes>
     </div>
   );
