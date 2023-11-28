@@ -1,4 +1,4 @@
-import axios from 'axios';
+// import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
@@ -27,7 +27,7 @@ const Products = () => {
     return (
         <div>{products?.length ? <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-around" }}>
             {products.map((pro) => (
-                <div onClick={() => router(`/single-product/${pro.id}`)} style={{ border: "1px solid black", width: "23%", height: "500px", marginBottom: "10px" }}>
+                <div onClick={() => router(`/oneproduct/${pro._id}`)} style={{ border: "1px solid black", width: "23%", height: "500px", marginBottom: "10px" }}>
                     <img style={{ width: "60%", height: "200px" }} src={pro.image} />
                     <h1>Name :{pro.name}</h1>
                     <h3>Price : {pro.price} $</h3>

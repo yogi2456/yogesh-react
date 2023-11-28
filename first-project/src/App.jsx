@@ -10,7 +10,7 @@ import Effect2 from './Components/13-09/Effect2';
 import Effect3 from './Components/15-09/Effect3';
 import Effect4 from './Components/15-09/Effect4';
 import Params from './Components/15-09/Params';
-//import SingleProduct from './Components/15-09/SingleProduct';
+// import SingleProduct from './Components/15-09/SingleProduct';
 import Mapping from './Components/16-09/Mapping';
 import Ternary from './Components/16-09/Ternary';
 import { useState } from 'react';
@@ -22,7 +22,7 @@ import Register2 from './Components/22-09/Register2';
 import ClassComponent from './Components/29-09/ClassComponent';
 import Login1 from './Components/30-09/Login1';
 import Products from './Components/30-09/Products';
-//import OneProduct from './Components/01-10/OneProduct';
+import OneProduct from './Components/01-10/OneProduct';
 import AddProduct from './Components/04-10/AddProduct';
 import UseMemo from './Components/06-10/UseMemo';
 import UseCallback from './Components/07-10/UseCallback';
@@ -32,11 +32,14 @@ import Customhook from './Components/13-10/Customhook';
 import CustomHookLs from './Components/13-10/CustomHookLs';
 import YourProducts from './Components/YourProducts';
 import UpdateProduct from './Components/UpdateProduct';
+import Navbar from './Components/Common/Navbar';
+import Cart from './Components/Cart';
 
 function App() {
   const [loggedIn, setIsLoggedIn] = useState(false);
   return (
     <div className="App">
+      <Navbar/>
      <Routes>
       <Route path ='/' element={<Homepage />} />
       <Route path ='/login' element={< Login />} />
@@ -61,9 +64,9 @@ function App() {
       <Route exact path='/Register2' element={<Register2 />} />
       <Route exact path='/ClassComponent' element={<ClassComponent />} />
       <Route exact path='/Login1' element={<Login1 />} />
-      <Route exact path='/Products' element={<Products />} />
-      {/* <Route exact path='/OneProduct/:id' element={<OneProduct />} /> */}
-      <Route exact path='/AddProduct' element={<AddProduct />} />
+      <Route exact path='/products' element={<Products />} />
+      <Route exact path='/oneproduct/:id' element={<OneProduct />} />
+      <Route exact path='/add-product' element={<AddProduct />} />
       <Route exact path='/UseMemo' element={<UseMemo />} />
       <Route exact path='/UseCallback' element={<UseCallback />} />
       <Route exact path='/UseReducer' element={<UseReducer />} />
@@ -72,6 +75,7 @@ function App() {
       <Route exact path='/CustomHookLs' element={<CustomHookLs />} />
       <Route exact path='/your-products' element={<YourProducts />} />
       <Route exact path='/update-product/:id' element={<UpdateProduct />} />
+      <Route exact path='/cart' element={<Cart />} />
       </Routes>
     </div>
   );
