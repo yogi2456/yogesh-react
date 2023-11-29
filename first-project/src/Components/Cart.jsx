@@ -17,16 +17,28 @@ const Cart = () => {
 
     async function getYourProducts() {
         try {
-            //console.log(state?.user?.id, "state?.user?.id")
-            const response = await api.post('/product/get-cart-product')
-            console.log(state?.user?.id, "state?.user?.id")
-            if(response.data.success) {
-                setCartProducts()
+            // const { data } = await axios.get('https://fakestoreapi.com/products');
+            const response = await api.post('/user/get-cart-product');
+            // console.log(data, "data here")
+            if (response.data.success) {
+                setCartProducts(response?.data?.products)
             }
         } catch (error) {
-            console.log(error)
-            toast.error(error?.response.data.message)
+            toast.error(error.data.message)
         }
+        // try {
+        //     //console.log(state?.user?.id, "state?.user?.id")
+        //     const response = await api.post('/user/get-cart-product')
+        //     //console.log(state?.user?.id, "state?.user?.id")
+        //     if(response.data.success) {
+        //         setCartProducts(response.data.products)
+        //     }
+        // } catch (error) {
+        //     console.log(error)
+        //     toast.error(error?.response.data.message)
+        // }
+
+        // alert("inside function")
     }
 
     useEffect(() => {

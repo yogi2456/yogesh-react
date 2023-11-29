@@ -1,11 +1,12 @@
 // import axios from 'axios';
 import { useContext, useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import api from '../../helpers/Axios.Config';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../Context/AuthContext';
 
 const OneProduct = () => {
+    const router = useNavigate();
     const [productData, setProductData] = useState({});
     //console.log(productData, "productdata")
     const { id } = useParams();
@@ -18,7 +19,7 @@ const OneProduct = () => {
             const response = await api.post("/user/add-cart", { userId: state.user.id, productId: id})
             if(response.data.success) {
                 toast.success(response.data.message)
-                //router()
+                //router('/cart')
             }
            } catch (error) {
                console.log(error)
