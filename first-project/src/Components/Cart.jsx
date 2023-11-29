@@ -1,14 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from './Context/AuthContext';
 import toast from 'react-hot-toast';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import api from '../helpers/Axios.Config';
 
 const Cart = () => {
 
     const router = useNavigate();
 
-    const id = useParams();
+    // const productId = useParams();
     const [cartProducts, setCartProducts] = useState([]);
 
     console.log(cartProducts, "cartProducts")
@@ -17,9 +17,9 @@ const Cart = () => {
 
     async function getYourProducts() {
         try {
-            // console.log(state?.user?.id, "state?.user?.id")
-            const response = await api.post('/product/get-cart-product', id)
             //console.log(state?.user?.id, "state?.user?.id")
+            const response = await api.post('/product/get-cart-product')
+            console.log(state?.user?.id, "state?.user?.id")
             if(response.data.success) {
                 setCartProducts()
             }

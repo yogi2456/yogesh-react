@@ -55,6 +55,8 @@ const YourProducts = () => {
                 <div key={pro._id} >
                     <img src={pro.image} />
                     <h3>{pro.name}</h3>
+                    <p>Price: {pro.price}</p>
+                    <p>Category: {pro.category}</p>
                     <button onClick={() => router(`/update-product/${pro._id}`)}>Update ?</button>
                     <button onClick={() => deleteProduct(pro._id)}>Delete ?</button>
                 </div>
