@@ -16,7 +16,7 @@ const OneProduct = () => {
     async function Cart(id) {
         if(state.user.id && id) {
            try {
-            const response = await api.post("/user/add-cart", { userId: state.user.id, productId: id})
+            const response = await api.post("/user/add-cart", { userId: state.user.id, productId: id}, )
             if(response.data.success) {
                 toast.success(response.data.message)
                 //router('/cart')
