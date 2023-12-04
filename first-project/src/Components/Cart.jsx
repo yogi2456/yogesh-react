@@ -15,30 +15,29 @@ const Cart = () => {
 
     const {state} = useContext(AuthContext);
 
-    async function getYourProducts() {
+    async function getYourCartProducts() {
         try {
             // const { data } = await axios.get('https://fakestoreapi.com/products');
-            const response = await api.post('/user/get-cart-product');
+            const response = await api.post('/user/cart', {id: state?.user?.id});
             // console.log(data, "data here")
             if (response.data.success) {
-                setCartProducts(response?.data?.products)
+                setCartProducts(response.data.products)
             }
         } catch (error) {
-            toast.error(error.data.message)
+            console.log(error)
         }
-        // try {
-        //     //console.log(state?.user?.id, "state?.user?.id")
-        //     const response = await api.post('/user/get-cart-product')
-        //     //console.log(state?.user?.id, "state?.user?.id")
-        //     if(response.data.success) {
-        //         setCartProducts(response.data.products)
-        //     }
-        // } catch (error) {
-        //     console.log(error)
-        //     toast.error(error?.response.data.message)
-        // }
+    }
 
-        // alert("inside function")
+    async function deleteProduct(productId) {
+        try {
+            const response = await api.post('/user/delete-cart', { productId, userId: state?.user?.id })
+            if (response.data.success) {
+                toast.success(response.data.message)
+                setCartProducts(response.data.products)
+            }
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     useEffect(() => {
@@ -49,14 +48,24 @@ const Cart = () => {
             }, 3000)
         } else {
             if(state?.user?.id) {
-                getYourProducts()
+                getYourCartProducts()
             }
         }
     }, [state])
   return (
     <div>
-      cart
-    </div>
+            <h1>Cart</h1>
+            {cartProducts.length ? <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+                {cartProducts.map((product) => (
+                    <div>
+                        <img src={product.image} />
+                        <h1>{product.name}</h1>
+                        <h1>${product.price}/-</h1>
+                        <button onClick={() => deleteProduct(product._id)}>Delete</button>
+                    </div>
+                ))}
+            </div> : <div>Loading..</div>}
+        </div>
   )
 }
 
