@@ -1,0 +1,119 @@
+.login {
+    width: 100%;
+    height: 700px;
+    background-color: white;
+    position: fixed;
+}
+.login1 {
+    width: 30%;
+    margin: auto;
+    height: 520px;
+    margin-top: 120px;
+    border: 0.5px solid gray;
+}
+.login2 {
+    width: 85%;
+    margin: auto;
+    /* border: 1px solid blue; */
+}
+.login2 > h2 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 40px;
+}
+.login2 > p:nth-child(1) {
+    margin-top: -15px;
+    font-size: 18px;
+}
+.login3 {
+    width: 100%;
+    height: 50px;
+    border: 1px solid gray;
+    margin-top: 30px;
+    opacity: 0.5;
+}
+.login3 > input {
+    text-align: left;
+    margin-top: 12px;
+    font-size: 18px;
+    color: black;
+    margin-right: 140px;
+    border: none;
+    outline: none;
+}
+.login4 {
+    color: #1A73E8;
+    text-align: left;
+    font-size: 16px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.login5 {
+    width: 100%;
+    height: 50px;
+    border: 1px solid gray;
+    margin-top: 20px;
+    opacity: 0.5;
+}
+.login5 > input {
+    text-align: left;
+    margin-top: 12px;
+    font-size: 18px;
+    color: black;
+    margin-right: 140px;
+    border: none;
+    outline: none;
+}
+.login5 > input > placeholder:hover {
+    margin-top: 20px;
+}
+.login6 {
+    text-align: left;
+    margin-top: 20px;
+}
+.login6 > p:nth-child(1) {
+    font-size: 15px;
+    color: gray;
+}
+.login6 > p:nth-child(2) {
+    color: #1A73E8;
+    font-size: 16px;
+    margin-top: -10px;
+    font-weight: bold;
+}
+.login7 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.login7 > p {
+    font-size: 16px;
+    color: #1A73E8;
+    font-weight: bold;
+}
+.login7 > button {
+    width: 80px;
+    height: 40px;
+    background-color: #1A73E8;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+}
+.login8 {
+    width: 30%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.login9 {
+    width: 44%;
+    display: flex;
+    justify-content: space-between;
+}
+.login10 {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+}
