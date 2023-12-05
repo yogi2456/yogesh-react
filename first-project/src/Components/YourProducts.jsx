@@ -53,7 +53,7 @@ const YourProducts = () => {
         <div>
             {yourProducts.map((pro) => (
                 <div key={pro._id} >
-                    <img src={pro.image} />
+                    <img alt='...' src={pro.image} />
                     <h3>{pro.name}</h3>
                     <p>Price: {pro.price}</p>
                     <p>Category: {pro.category}</p>

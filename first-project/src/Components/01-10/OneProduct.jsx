@@ -19,7 +19,7 @@ const OneProduct = () => {
             const response = await api.post("/user/add-cart", { userId: state.user.id, productId: id}, )
             if(response.data.success) {
                 toast.success(response.data.message)
-                //router('/cart')
+                router('/cart')
             }
            } catch (error) {
                console.log(error)
@@ -52,7 +52,7 @@ const OneProduct = () => {
             {productData?._id ?
                 <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                     <div style={{ width: "40%", border: "5px solid black" }}>
-                        <img style={{ width: "60%", height: "85%" }} src={productData.image} />
+                        <img alt='ubhn' style={{ width: "60%", height: "85%" }} src={productData.image} />
                     </div>
                     <div style={{ width: "40%", border: "5px solid black" }}>
                         <h1>{productData.name}</h1>

@@ -7,9 +7,9 @@ import { AuthContext } from './Context/AuthContext';
 const Login = () => {
   const [userData, setUserData] = useState({ email: "", password: "" });
   const router = useNavigate();
-  const { Login, state } =useContext(AuthContext)
+  const { Login } = useContext(AuthContext)
   // console.log(userData,"userdata")
-  console.log(state, "state")
+  // console.log(state, "state")
 
   const handleChange = (event) => {
     // console.log(event.target.value, "value", event.target.name, "name")

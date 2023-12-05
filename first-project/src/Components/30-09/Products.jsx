@@ -28,7 +28,7 @@ const Products = () => {
         <div>{products?.length ? <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-around" }}>
             {products.map((pro) => (
                 <div onClick={() => router(`/oneproduct/${pro._id}`)} style={{ border: "1px solid black", borderRadius: "20px", width: "19%", backgroundColor: "#548C2F", height: "450px", marginBottom: "10px" }}>
-                    <img style={{ width: "60%", height: "200px" }} src={pro.image} />
+                    <img alt='...' style={{ width: "60%", height: "200px" }} src={pro.image} />
                     <h1 style={{fontSize: "20px"}}>Name :{pro.name}</h1>
                     <h3>Price : {pro.price} $</h3>
                     <h2>Category : {pro.category}</h2>
