@@ -55,7 +55,7 @@ const Cart = () => {
   return (
     <div>
             <h1>Cart</h1>
-            {cartProducts.length ? <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+            {cartProducts.length ? <div style={{display: "flex", justifyContent: "space-around"}}>
                 {cartProducts.map((product) => (
                     <div>
                         <img alt='..' src={product.image} />
