@@ -45,6 +45,8 @@ function Homepage () {
             <button onClick={() => toast.error ("Clicked")}>Click for toast error</button>
             <button onClick={() => toast.success ("Clicked")}>Click for toast success</button> */}
 
+            {/* <h1 className="textleft">taliwind css</h1> */}
+
         </div>
     )
 }
