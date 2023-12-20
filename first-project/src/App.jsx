@@ -34,6 +34,7 @@ import YourProducts from './Components/YourProducts';
 import UpdateProduct from './Components/UpdateProduct';
 import Navbar from './Components/Common/Navbar';
 import Cart from './Components/Cart';
+import Calculator from './Components/Calculator';
 
 function App() {
   const [loggedIn, setIsLoggedIn] = useState(false);
@@ -76,6 +77,7 @@ function App() {
       <Route exact path='/your-products' element={<YourProducts />} />
       <Route exact path='/update-product/:id' element={<UpdateProduct />} />
       <Route exact path='/cart' element={<Cart />} />
+      <Route exact path='/calculator' element={<Calculator/>} />
       </Routes>
     </div>
   );
