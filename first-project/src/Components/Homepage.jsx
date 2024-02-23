@@ -47,6 +47,7 @@ function Homepage () {
 
             {/* <h1 className="text-left pt-10 text-3xl font-bold underline">taliwind css</h1>
             <h1>taluchdcbdb</h1> */}
+            <button onClick={router('/Sign')}></button>
 
         </div>
     )
