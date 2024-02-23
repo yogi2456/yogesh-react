@@ -35,6 +35,7 @@ import UpdateProduct from './Components/UpdateProduct';
 import Navbar from './Components/Common/Navbar';
 import Cart from './Components/Cart';
 import Calculator from './Components/Calculator';
+import Sign from './Components/Sign'
 
 function App() {
   const [loggedIn, setIsLoggedIn] = useState(false);
@@ -78,6 +79,7 @@ function App() {
       <Route exact path='/update-product/:id' element={<UpdateProduct />} />
       <Route exact path='/cart' element={<Cart />} />
       <Route exact path='/calculator' element={<Calculator/>} />
+      <Route exact path='/sign' element={<Sign/>} />
       </Routes>
     </div>
   );
