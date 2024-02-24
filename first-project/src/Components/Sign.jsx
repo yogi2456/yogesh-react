@@ -6,8 +6,8 @@ const Sign = () => {
 
  <div className='bg-image'>
    <nav className='nav-home'>
-   <i class="fa-solid fa-house fa-xl"></i>
-   <h2>Home</h2>
+   <a href='course.html'><i class="fa-solid fa-house fa-xl"></i></a>
+   <a href='course.html'><h2>Home</h2></a>
    </nav>
 
    <form id='login-form'>
@@ -15,9 +15,9 @@ const Sign = () => {
       <input type='email' placeholder='Email' required/>
       <input type='password' placeholder='Enter your password' required/>
       <input type='submit' value="login" className='login-button'/>
-      <a>Forget Password</a>
+      <a href='forgotpassword.html'>Forget Password</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a>Create Account</a>
+      <a href='signup.html'>Create Account</a>
 
    </form>
  </div>
